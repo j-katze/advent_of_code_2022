@@ -31,18 +31,6 @@ int main()
 		}
 	}
 	close(fd);
-	if (max1 < temp)
-	{
-		max2 = max1;
-		max1 = temp;
-	}
-	else if (max2 < temp)
-	{
-		max3 = max2;
-		max2 = temp;
-	}
-	else if (max3 < temp)
-		max3 = temp;
 	out = max1 + max2 + max3;
 	ft_printf("top 3:		%d\n", max3);
 	ft_printf("top 2:		%d\n", max2);
