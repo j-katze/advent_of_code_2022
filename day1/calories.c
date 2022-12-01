@@ -7,10 +7,10 @@ int main()
 	char	*line;
 	int	read, temp = 0, max1 = 0, max2 = 0, max3 = 0, out;
 
-	line = get_next_line(fd);
-	while(line != NULL)
+	while((line = get_next_line(fd)) != NULL)
 	{
 		read = ft_atoi(line);
+		free(line);
 		if (read != 0)
 			temp += read;
 		else
@@ -29,8 +29,8 @@ int main()
 				max3 = temp;
 			temp = 0;
 		}
-		line = get_next_line(fd);
 	}
+	close(fd);
 	if (max1 < temp)
 	{
 		max2 = max1;
@@ -44,7 +44,6 @@ int main()
 	else if (max3 < temp)
 		max3 = temp;
 	out = max1 + max2 + max3;
-	close(fd);
 	ft_printf("top 3:		%d\n", max3);
 	ft_printf("top 2:		%d\n", max2);
 	ft_printf("top 1:		%d\n", max1);
