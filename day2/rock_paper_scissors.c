@@ -67,6 +67,7 @@ int main()
 			else if (ft_strchr(strat, 'C'))
 				score += 3;
 		}
+		free(line);
 	}
 	ft_printf("%d", score);
 }
