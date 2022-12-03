@@ -35,5 +35,5 @@ int main()
 	ft_printf("top 3:		%d\n", max3);
 	ft_printf("top 2:		%d\n", max2);
 	ft_printf("top 1:		%d\n", max1);
-	ft_printf("top total:	 %d\n", out);
+	ft_printf("top total:	%d\n", out);
 }
